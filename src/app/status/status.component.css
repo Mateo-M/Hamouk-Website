@@ -4,12 +4,21 @@
 }
 
 .v-align {
-    margin-top: 2.5%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.title {
-    font-size: 2.46rem;
+.title-secondary {
+    font-size: 2rem;
     font-weight: 800;
+}
+
+.underline {
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-bottom: 5px solid #DEE6F1;
 }
 
 p {
@@ -20,15 +29,15 @@ p {
     color: #A8B0C7 !important;
 }
 
-#0fcc45 p span {
+p span {
     font-size: 0.1rem;
     color: #A8B0C7 !important;
 }
 
-/* Card serveur */
+/* Serveurs */
 
-.status-card {
-    margin: 1.75em 0;
+.server-card {
+    margin-bottom: 1.75em;
     font-size: .85rem;
     border-radius: 1em;
     border: none;
@@ -74,7 +83,7 @@ span.blink {
     color: #A8B0C7 !important;
 }
 
-/*Animations*/
+/* Animations */
 
 @keyframes blink {
     100% {
