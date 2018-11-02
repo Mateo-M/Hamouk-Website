@@ -16,6 +16,7 @@
 
 .navbar-brand {
     font-family: 'Upbolters-New-Italic';
+    text-transform: uppercase;
     font-size: 3rem;
 }
 
@@ -26,6 +27,7 @@
 }
 
 .badge {
+    text-transform: none;
     padding: .4em;
     color: white !important;
     text-shadow: 0 3px 5px rgba(0, 0, 0, .25);
