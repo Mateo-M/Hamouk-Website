@@ -6,19 +6,22 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StatusComponent } from './status/status.component';
+import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    data: { title: 'Accueil' }
+    component: HomeComponent
   },
   {
     path: 'status',
-    component: StatusComponent,
-    data: { title: 'Status' }
+    component: StatusComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
 ];
 
@@ -27,6 +30,7 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     StatusComponent,
+    AboutComponent,
     NavbarComponent,
     FooterComponent,
   ],
