@@ -1,0 +1,84 @@
+::ng-deep html,
+::ng-deep body {
+    background-color: white;
+}
+
+.v-align {
+    margin-top: 2.5%;
+}
+
+.title {
+    font-size: 2.46rem;
+    font-weight: 800;
+}
+
+p {
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.75em;
+    color: #A8B0C7 !important;
+}
+
+#0fcc45 p span {
+    font-size: 0.1rem;
+    color: #A8B0C7 !important;
+}
+
+/* Card serveur */
+
+.status-card {
+    margin: 1.75em 0;
+    font-size: .85rem;
+    border-radius: 1em;
+    border: none;
+    padding: 2em 1em;
+    font-weight: 600;
+    background: white;
+    box-shadow: 0 7.5px 25px 0 rgba(0, 0, 0, .075);
+}
+
+.card-col {
+    padding: 0 .75em !important;
+}
+
+.name {
+    display: inline-block;
+    max-width: 233px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.online-indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: #56D4A4;
+    border-radius: 50%;
+    position: relative;
+}
+
+span.blink {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #0fcc45;
+    opacity: 0.7;
+    border-radius: 50%;
+    animation: blink 1s linear infinite;
+}
+
+.secondary {
+    color: #A8B0C7 !important;
+}
+
+/*Animations*/
+
+@keyframes blink {
+    100% {
+        transform: scale(2, 2);
+        opacity: 0;
+    }
+}
