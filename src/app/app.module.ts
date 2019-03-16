@@ -15,10 +15,10 @@ const appRoutes: Routes = [
     path: '',
     component: HomeComponent
   },
-  {
+  /*{
     path: 'status',
     component: StatusComponent
-  },
+  },*/
   {
     path: 'about',
     component: AboutComponent
