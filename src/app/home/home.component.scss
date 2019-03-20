@@ -1,0 +1,121 @@
+::ng-deep html,
+::ng-deep body {
+  background-color: #DFE3EF;
+}
+
+.v-align {
+  margin-top: 5%;
+}
+
+.title {
+  font-size: 2.46rem;
+  font-weight: 800;
+}
+
+p {
+  margin-top: 1em;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.75em;
+  color: #A8B0C7 !important;
+}
+
+p span {
+  font-size: 0.1rem;
+  color: #A8B0C7 !important;
+}
+
+/* Bouton de téléchargement */
+
+.button-download {
+  background: rgb(210, 129, 0);
+  background: -moz-linear-gradient(45deg, rgba(210, 129, 0, 1) 0%, rgba(255, 199, 0, 1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(210, 129, 0, 1) 0%, rgba(255, 199, 0, 1) 100%);
+  background: linear-gradient(45deg, rgba(210, 129, 0, 1) 0%, rgba(255, 199, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d28100', endColorstr='#ffc700', GradientType=1);
+  padding: 2em 5em;
+  cursor: pointer;
+  border: 0;
+  border-radius: .5em;
+  min-width: 120px;
+  overflow: hidden;
+  position: absolute;
+  transition: all .3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button-download:hover {
+  transition: all .3s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: scale(1.05);
+  box-shadow: 0 10px 50px 0 rgba(238, 171, 0, .5);
+}
+
+.button-download span {
+  font-size: 1rem;
+  font-weight: 800;
+  color: white !important;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+  transform: translateX(10%);
+  display: block;
+  position: relative;
+  z-index: 10;
+  transition: .3s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button-download:after,
+.button-download:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -125%;
+  height: 100%;
+  width: 115%;
+  color: white;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.button-download:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.button-download:before {
+  background: rgb(210, 129, 0);
+  background: -moz-linear-gradient(45deg, rgba(210, 129, 0, 1) 0%, rgba(255, 199, 0, 1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(210, 129, 0, 1) 0%, rgba(255, 199, 0, 1) 100%);
+  background: linear-gradient(45deg, rgba(210, 129, 0, 1) 0%, rgba(255, 199, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d28100', endColorstr='#ffc700', GradientType=1);
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button-download:hover:after {
+  left: calc(0% - 1.25em);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button-download:hover:before {
+  left: calc(0% - 1.25em);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.button-download:hover span {
+  transition: .3s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: translateX(-5%);
+}
+
+.button-download .fa-arrow-down {
+  color: white !important;
+  transition: .3s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.button-download:hover .fa-arrow-down {
+  transition: .3s cubic-bezier(0.86, 0, 0.07, 1);
+  transform: translateX(25%);
+  opacity: 1;
+}

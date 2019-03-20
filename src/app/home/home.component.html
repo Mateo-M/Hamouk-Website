@@ -10,7 +10,15 @@
         <p>Ouais c'est pas une blague, t'es vraiment sur le site du serveur minecraft<br />de la eSalt. <span>M-D-R (
             ͡°
             ͜ʖ ͡°)</span></p>
-        <button class="btn">
+        <ng-template #content let-modal>
+          <div class="modal-body text-center">
+            <p>Le launcher est pas encore dispo', cheh !</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+          </div>
+        </ng-template>
+        <button class="btn button-download" (click)="openSm(content)">
           <span>Launcher <i class="fas fa-arrow-down"></i></span>
         </button>
       </div>
