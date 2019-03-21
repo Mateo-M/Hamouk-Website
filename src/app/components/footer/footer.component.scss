@@ -30,7 +30,26 @@
   text-shadow: 0 3px 5px rgba(0, 0, 0, .1);
 }
 
-/*.footer {
+.footer-link {
+  /*margin: 0 50px;*/
+  font-weight: 600;
+  font-size: .9rem;
+  opacity: .5;
+  color: white !important;
+  transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  opacity: 1;
+  letter-spacing: 1.5px;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+}
+
+/*
+COMMENT UNTIL FIX
+
+.footer {
   line-height: 15%;
   height: 15%;
   width: 100%;
@@ -56,25 +75,7 @@
   position: absolute;
   bottom: -260px;
   z-index: 1;
-}*/
-
-.footer-link {
-  /*margin: 0 50px;*/
-  font-weight: 600;
-  font-size: .9rem;
-  opacity: .5;
-  color: white !important;
-  transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
-
-.footer-link:hover {
-  text-decoration: none;
-  opacity: 1;
-  letter-spacing: 1.5px;
-  text-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-}
-
-/*COMMENT UNTIL FIX
 
 .wave {
     background: url(../../../assets/img/wave.svg) repeat-x;
@@ -135,4 +136,5 @@
         -webkit-transform: translate3d(0, 5px, 0);
         transform: translate3d(0, 5px, 0);
     }
-}*/
+}
+*/
