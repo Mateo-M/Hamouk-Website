@@ -11,12 +11,44 @@
       <li class="nav-item">
         <a class="nav-link" href="https://discord.gg/R9FUB7d">Discord</a>
       </li>
-      <!--<li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" routerLink="/status">Statut</a>
-      </li>-->
+      </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/about">À propos</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/staff">Staff</a>
+      </li>
+      <li class="nav-item" *ngIf="auth.user$ | async; else guest">
+        <a class="nav-link" routerLink="/admin">Admin</a>
+      </li>
+      <div *ngIf="auth.user$ | async as user">
+        <span class="username">
+          {{ user.displayName }}
+        </span>
+        <div ngbDropdown placement="bottom-right" class="d-inline-block">
+          <img [src]="user.photoURL" class="img-fluid rounded shadow-sm avatar" draggable="false" id="userDropdown"
+            alt="User avatar" ngbDropdownToggle>
+          <div ngbDropdownMenu aria-labelledby="userDropdown">
+            <h6 class="dropdown-header">Hello 😊</h6>
+            <button ngbDropdownItem>Profile
+              <span class="badge badge-success">MC</span>
+            </button>
+            <div class="dropdown-divider"></div>
+            <button (click)="auth.signOut()" ngbDropdownItem>Sign Out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- User not logged in -->
+      <ng-template #guest>
+        <li class="nav-item">
+          <button (click)="auth.googleSignin()" type="button" class="btn btn-primary">
+            <i class="fab fa-google"></i> Connexion
+          </button>
+        </li>
+      </ng-template>
     </ul>
   </div>
 </nav>
