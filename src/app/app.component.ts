@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AngularFireFunctions } from '@angular/fire/functions';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 
 export class AppComponent implements OnInit {
   title: 'Hamouk';
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor(private spinner: NgxSpinnerService, private fns: AngularFireFunctions) { }
   ngOnInit() {
     /** spinner starts on init */
     this.spinner.show();
@@ -17,5 +18,13 @@ export class AppComponent implements OnInit {
       /** spinner ends after 2 seconds */
       this.spinner.hide();
     }, 2500);
+
+    const data$ = this.fns.httpsCallable('getIp')({});
+    data$.subscribe((ip: string) => {
+      console.log(ip);
+    });
+
   }
+
+
 }
