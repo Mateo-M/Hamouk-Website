@@ -1,3 +1,9 @@
-<p>
-  admin works!
-</p>
+<label>
+  Username :
+  <input type="text" [formControl]="username" placeholder="Pseudonyme">
+</label>
+<div *ngIf="!username.valid">
+  <p>Le pseudonyme doit être composé au minimum de 3 caractères et au maximum de 16 caractères.</p>
+  <p>Les caractères autorisés sont : les majuscules, les minuscules, les chiffres et le tiret bas.</p>
+</div>
+<button type="submit" [disabled]="!username.valid" (click)="onSubmit()">Submit</button>
