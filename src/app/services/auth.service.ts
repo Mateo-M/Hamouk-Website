@@ -41,14 +41,19 @@ export class AuthService {
     return this.updateUserData(credential.user);
   }
 
-  private updateUserData({ uid, email, displayName, photoURL }: User) {
+  private updateUserData(user: User) {
     // Sets user data to Firestore on login
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${uid}`);
+    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
     const data = {
-      uid,
-      email,
-      displayName,
-      photoURL
+      uid: user.uid,
+      email: user.email,
+      displayName: user.displayName,
+      photoURL: user.photoURL/*,
+      roles: {
+        reader = true,
+        author = false,
+        admin = false
+      }*/
     };
     return userRef.set(data, { merge: true });
   }
