@@ -21,6 +21,6 @@ export class AdminComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('test');
+    console.log(this.username.value);
   }
 }
